@@ -1,0 +1,88 @@
+{
+  "questions": [
+    {
+      "id": "temperature",
+      "prompt": {
+        "eng": "What is the patient's temperature?"
+      },
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "blood-pressure-systolic",
+      "prompt": {
+        "eng": "What is the patient's systolic blood pressure?"
+      },
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "blood-pressure-diastolic",
+      "prompt": {
+        "eng": "What is the patient's diastolic blood pressure?"
+      },
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "headache",
+      "prompt": {
+        "eng": "Does the patient have headache(s)?"
+      },
+      "type": "bool",
+      "required": true,
+      "followOn": [
+        "headache-frequency",
+        "headache-severity"
+      ]
+    },
+    {
+      "id": "headache-frequency",
+      "prompt": {
+        "eng": "How often does the patient have headaches?"
+      },
+      "type": "likert"
+    },
+    {
+      "id": "headache-severity",
+      "prompt": {
+        "eng": "How severe are these headaches?"
+      },
+      "type": "likert"
+    },
+    {
+      "id": "flu",
+      "prompt": {
+        "eng": "Does the patient have flu-like symptoms?"
+      },
+      "type": "bool",
+      "required": true,
+      "followOn": [
+        "chills",
+        "sweats"
+      ]
+    },
+    {
+      "id": "chills",
+      "prompt": {
+        "eng": "Does the patient have chills?"
+      },
+      "type": "bool"
+    },
+    {
+      "id": "sweats",
+      "prompt": {
+        "eng": "Does the patient have night sweats?"
+      },
+      "type": "bool"
+    },
+    {
+      "id": "fatigue",
+      "prompt": {
+        "eng": "Is the patient tired often?"
+      },
+      "type": "bool",
+      "required": true
+    }
+  ]
+}
