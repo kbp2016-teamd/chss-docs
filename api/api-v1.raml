@@ -1,0 +1,73 @@
+#%RAML 1.0
+title: Community Healthcare Support System API
+version: v1
+mediaType: application/json
+securitySchemes:
+  basic:
+    description: Basic HTTP authentication
+    type: Basic Authentication
+    describedBy:
+      headers:
+        Authorization:
+          type: string
+          description: |
+            As per the Basic HTTP Authentication standard:
+            https://en.wikipedia.org/wiki/Basic_access_authentication
+securedBy: [ basic ]
+
+/user:
+  displayName: User management endpoint.
+  get:
+    description: |
+      Lists the users in the system.
+  post:
+    description: |
+      Allows the caller to create a user in the system.
+
+  /{userId}:
+    uriParameters:
+      userId:
+        description: The ID of the user in question.
+        type: int
+
+    get:
+      description: |
+        Retrieve information about a specified user.
+    put:
+      description: |
+        Update the details of the specified user.
+    delete:
+      description: |
+        Delete the specified user.
+
+/patient:
+  displayName: Patient management endpoint.
+  get:
+    description: |
+      Lists patients in the system.
+  post:
+    description: |
+      Allows the caller to create a user in the system.
+
+  /{patientId}:
+    uriParameters:
+      patientId:
+        description: The ID of the patient in question.
+        type: int
+
+    get:
+      description: |
+        Retrieve the details of the specified patient.
+    put:
+      description: |
+        Update the details of the specified patient.
+
+/evaluation:
+  displayName: |
+    Interface for managing questionnaires/evaluations submitted by community healthcare workers.
+  get:
+    description: |
+      List and search interface for historical patient evaluations.
+  post:
+    description: |
+      Allows the caller to create a new evaluation.
