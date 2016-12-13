@@ -13,17 +13,22 @@ scheme).
 ## Components
 The software system consists of several components:
 
-* An [API](https://github.com/kbp2016-teamd/chss-api) to provide
-  data storage and functionality.
+* A [Data Collection API](https://github.com/kbp2016-teamd/chss-api) to
+  provide data storage and functionality.
 * An [Android application](https://github.com/kbp2016-teamd/chss-workerapp)
   to be used by the community healthcare workers themselves while out
   in the field.
 * A [Java-based client library](https://github.com/kbp2016-teamd/chss-java-client)
   for integrating the Android application (or any other Java-based
   application) with the API.
+* A [web-based management interface](https://github.com/kbp2016-teamd/chss-web-ui)
+  for data visualisation.
+* An [Analytics API](https://github.com/kbp2016-teamd/chss-analytics-api)
+  for performing calculations and providing data to the management
+  interface.
 
 ## Documentation Guide
 The following documentation is available in this repository:
 
-* The [API specification](api/api-v1.raml), in
-  [RAML](http://raml.org/) format.
+* The [Data Collection API specification](api/collection-api-v1.raml),
+  in [RAML](http://raml.org/) format.
