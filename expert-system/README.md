@@ -13,6 +13,11 @@ In order to support this, the system requires an
 the community healthcare worker in diagnosing the likely issues a
 patient is facing, and whether or not they need to visit the clinic.
 
+## Disclaimer
+This software is purely proof-of-concept, and as such the criteria in
+this documentation and the CHSS software must not be used in actual
+medical diagnosis.
+
 ## Prevalent Health Issues
 As per the [leading causes of death in South Africa](http://www.statssa.gov.za/?page_id=737&id=3)
 (data from Stats SA), the following diseases are targeted for the
