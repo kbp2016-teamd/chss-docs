@@ -24,3 +24,17 @@ minimum viable product (MVP) CHSS:
 
 These issues accounted for approximately 40% of all deaths in
 South Africa in 2013.
+
+## Questions
+### Personal Information
+The following personal information needs to be asked of a user when
+they are first enrolled into the system:
+
+| Field | Type | Details/Notes |
+| ----- | ---- | ------------- |
+| First name | `string` |   |
+| Last name | `string` |   |
+| ID number | `string` | The patient's ID number |
+| Address | `string` | Where the patient lives |
+| Gender | `char` | `m` or `f` |
+| Date of birth | `date` | Used to determine patient's age |
