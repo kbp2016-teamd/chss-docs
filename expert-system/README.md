@@ -85,15 +85,15 @@ Each of the following possible conditions have associated symptoms based
 on the patient's answers to the evaluation questions and their
 demographic profile.
 
-| Condition | Primary Symptom(s) | Supporting Symptom(s) |
-| --------- | ------------------ | --------------------- |
-| **Tuberculosis** | `temp` > 37.7, `cough` | `cough-blood`, `sweats`, `fatigue`, `weakness`, `weight-loss`, `chest-pain` |
-| **Early-Stage HIV** | `temp` > 37.7, `skin-rash` | `muscle-ache`, `joint-pain`, `diarrhea`, `swollen-lymph` |
-| **High Blood Pressure** | `syst-blood-pressure` > 140 OR `dia-blood-pressure` > 90 | |
-| **Heart Disease** | `chest-pain` | `heartburn`, `shortness-of-breath`, `palpitations`, `weakness`, `nausea`, `sweats` |
-| **Stroke** | `paralysis` | `numbness`, `blurred-vision`, `dizziness`, `loss-of-balance` |
-| **Pneumonia** | `temp` > 37.7, `cough` | `cough-blood`, `chills`, `chest-pain`, `weakness`, `fatigue`, `nausea`, `vomiting` |
-| **Flu** | `temp` > 37.7 | `sore-throat`, `dry-cough`, `sneezing`, `congestion`, `headache`, `chills`, `muscle-ache`, `fatigue`, `weakness` |
+| Condition | Primary Symptom(s) | Supporting Symptom(s) | Remedial Action |
+| --------- | ------------------ | --------------------- | --------------- |
+| **Tuberculosis** | `temp` > 37.7, `cough` | `cough-blood`, `sweats`, `fatigue`, `weakness`, `weight-loss`, `chest-pain` | Refer to clinic |
+| **Early-Stage HIV** | `temp` > 37.7, `skin-rash` | `muscle-ache`, `joint-pain`, `diarrhea`, `swollen-lymph` | Refer to clinic |
+| **High Blood Pressure** | `syst-blood-pressure` > 140 OR `dia-blood-pressure` > 90 | | Refer to clinic |
+| **Heart Disease** | `chest-pain` | `heartburn`, `shortness-of-breath`, `palpitations`, `weakness`, `nausea`, `sweats` | Refer to hospital |
+| **Stroke** | `paralysis` | `numbness`, `blurred-vision`, `dizziness`, `loss-of-balance` | Refer to hospital |
+| **Pneumonia** | `temp` > 37.7, `cough` | `cough-blood`, `chills`, `chest-pain`, `weakness`, `fatigue`, `nausea`, `vomiting` | If `age` >= 60 refer to hospital, else refer to clinic |
+| **Flu** | `temp` > 37.7 | `sore-throat`, `dry-cough`, `sneezing`, `congestion`, `headache`, `chills`, `muscle-ache`, `fatigue`, `weakness` | If `age` >= 60 refer to clinic, else offer symptomatic treatment |
 
 The questions for **Primary Symptoms** should always be asked, but
 questions for **Supporting Symptoms** should only be asked if the
@@ -101,3 +101,12 @@ relevant criteria are met for primary symptoms.
 
 For example, if the patient's `temp` > 37.7 and `cough` = `true`,
 then only ask the remaining questions regarding **Tuberculosis**.
+
+### Risk Levels
+The following risk levels are defined for all conditions.
+
+| Risk Level | Criteria |
+| ---------- | -------- |
+| **None to Low** | No primary symptoms |
+| **Low to Moderate** | Primary symptoms but no secondary symptoms |
+| **Moderate to High** | Primary symptoms and some secondary symptoms (or if the condition does not have any secondary symptoms) |
