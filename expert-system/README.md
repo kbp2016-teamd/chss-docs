@@ -38,7 +38,6 @@ they are first enrolled into the system:
 | Address | `string` | Where the patient lives |
 | Gender | `char` | `m` or `f` |
 | Date of birth | `date` | Used to determine patient's age |
-| Weight | `number` | The patient's measured weight, in kilograms |
 | Height | `number` | The patient's height, in metres |
 
 ### Evaluation Questions
@@ -47,6 +46,7 @@ separate evaluation.
 
 | ID  | Type | Question | Details/Notes |
 | --- | ---- | -------- | ------------- |
+| `weight`| `number` | What is the patient's weight? (kg) | To be taken on scale |
 | `temp` | `number` | What is the patient's temperature? | To be taken by oral thermometer |
 | `syst-blood-pressure` | `number` | Systolic blood pressure? | Taken by blood pressure cuff |
 | `dia-blood-pressure` | `number` | Diastolic blood pressure? | Taken by blood pressure cuff |
